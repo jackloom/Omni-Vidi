@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#image {
+  position:absolute;
+  width:640px;
+  height:480px;
+  top:100px;
+  left:50%;
+  margin-left:-320px;
+  background-color:#333;
+}

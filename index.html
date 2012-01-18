@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>ECE BROs</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body OnKeyDown="key(event);">
+
+	<!--<div class="topbar"></div>-->
+	<p>ECE Bros</p>
+	<div id="image" onmousemove='setMouse()'></div>
+	<!--<footer></footer>-->
+</body>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>-->
+	<script type="text/javascript" src="js/render.js"></script>
+	<script>
+		//p -> position
+		//o -> omega (angle)
+		var xp=0;
+		var yp=0;
+		var ox=0;
+		var oy=0;
+
+		function key(e) {
+     	  switch(e.keyCode){
+     	  	case 37:
+     	      xp--;
+     	      break;
+
+     	  	case 38:
+     	  	  yp++;
+     	  	  break;
+
+     	  	case 39:
+     	  	  xp++;
+     	  	  break;
+
+     	  	case 40:
+     	  	  yp--;
+     	  	  break;
+     	  }
+		}
+
+		function setMouse(){
+			ox = parseInt(window.event.offsetX * (360/640));
+			oy = parseInt(window.event.offsetY * (180/480));
+		}
+	</script>
+</html>
